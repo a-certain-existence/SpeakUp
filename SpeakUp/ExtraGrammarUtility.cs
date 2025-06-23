@@ -158,8 +158,8 @@ namespace SpeakUp
             for (int i = skills.Count; i-- > 0;)
             {
                 var skill = skills[i];
-                MakeRule(symbol + skill.def.label + "_level", skill.levelInt.ToString());
-                MakeRule(symbol + skill.def.label + "_passion", skill.passion.ToString());
+                MakeRule(symbol + skill.def.defName.ToLower() + "_level", skill.levelInt.ToString());
+                MakeRule(symbol + skill.def.defName.ToLower() + "_passion", skill.passion.ToString());
             }
 
             //childhood
