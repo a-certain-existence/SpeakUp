@@ -45,7 +45,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\1.5\Assemblies\</OutputPath>
+    <OutputPath>..\1.6\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>none</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -61,8 +61,8 @@
   <ItemGroup>
     <Compile Include="ExtraGrammarUtility.cs" />
     <Compile Include="DialogManager.cs" />
+    <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_InteractionsTrackerTickInterval.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith.cs" />
-    <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_InteractionsTrackerTick.cs" />
     <Compile Include="HarmonyPatches\GrammarResolver_Resolve.cs" />
     <Compile Include="HarmonyPatches\GrammarResolver_RandomPossiblyResolvableEntry.cs" />
     <Compile Include="HarmonyPatches\PlayLogEntry_Interaction_ClickedFromPOV.cs" />
@@ -93,15 +93,15 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Publicizer">
-      <Version>2.2.1</Version>
+      <Version>2.3.0</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.5.4104</Version>
+      <Version>1.6.4498-beta</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
-      <Version>2.3.3</Version>
+      <Version>2.3.6</Version>
       <IncludeAssets>compile</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>

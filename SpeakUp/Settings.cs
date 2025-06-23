@@ -22,9 +22,9 @@ namespace SpeakUp
             Listing_Standard listing = new Listing_Standard();
 
             listing.Begin(inRect);
-            listing.Label("Lines Per Conversation: " + SpeakUpSettings.linesPerConversation.ToString(), -1, "How many lines the pawns will use when talking.");
+            listing.Label("Lines Per Conversation: " + SpeakUpSettings.linesPerConversation.ToString(), -1, new TipSignal("How many lines the pawns will use when talking."));
             SpeakUpSettings.linesPerConversation = (int)Math.Truncate(listing.Slider(SpeakUpSettings.linesPerConversation, 0f, 5f));
-            listing.Label("Ticks Between Lines: " + SpeakUpSettings.ticksBetweenLines.ToString(), -1, "How many ticks between two lines");
+            listing.Label("Ticks Between Lines: " + SpeakUpSettings.ticksBetweenLines.ToString(), -1, new TipSignal("How many ticks between two lines"));
             SpeakUpSettings.ticksBetweenLines = (int)Math.Truncate(listing.Slider(SpeakUpSettings.ticksBetweenLines, 0f, 120f));
 
             listing.CheckboxLabeled("Same Region Restriction", ref SpeakUpSettings.sameRegionRestriction, "Restrict pawns from talking when in different rooms.");

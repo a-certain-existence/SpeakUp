@@ -5,8 +5,8 @@ using Verse;
 namespace SpeakUp
 {
     //Fires a new line if scheduled.
-    [HarmonyPatch(typeof(Pawn_InteractionsTracker), nameof(Pawn_InteractionsTracker.InteractionsTrackerTick))]
-    static class Pawn_InteractionsTracker_InteractionsTrackerTick
+    [HarmonyPatch(typeof(Pawn_InteractionsTracker), nameof(Pawn_InteractionsTracker.InteractionsTrackerTickInterval))]
+    static class Pawn_InteractionsTracker_InteractionsTrackerTickInterval
     {
         static void Postfix(Pawn ___pawn)
         {
