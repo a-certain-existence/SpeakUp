@@ -49,6 +49,7 @@ namespace SpeakUp
             if (SpeakUpSettings.sameRegionRestriction)
             {
                 Map map = Initiator.Map;
+                if (map == null) return;
                 if (RegionAndRoomQuery.DistirctAtFast(Initiator.Position, map, RegionType.Normal) != RegionAndRoomQuery.DistirctAtFast(Recipient.Position, map, RegionType.Normal) && 
                     Initiator.Position.DistanceTo(Recipient.Position) >= 14f) return;
             }
