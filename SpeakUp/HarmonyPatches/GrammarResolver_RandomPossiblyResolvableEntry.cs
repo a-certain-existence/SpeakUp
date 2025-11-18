@@ -11,7 +11,7 @@ namespace SpeakUp
     [HarmonyPatch(typeof(GrammarResolver), nameof(GrammarResolver.RandomPossiblyResolvableEntry))]
     public class GrammarResolver_RandomPossiblyResolvableEntry
     {
-        public static List<KeyValuePair<string, string>> CurrentRules = new List<KeyValuePair<string, string>>();
+        public static List<KeyValuePair<string, string>> CurrentRules = new List<KeyValuePair<string, string>>();        
 
         public static void Prefix(string keyword, Dictionary<string, string> constants, List<string> extraTags, List<string> resolvedTags, Dictionary<string, List<GrammarResolver.RuleEntry>> ___rules, ref GrammarResolver.RuleEntry __result)
         {

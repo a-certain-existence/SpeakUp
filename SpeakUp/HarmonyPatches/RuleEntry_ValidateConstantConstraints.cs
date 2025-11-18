@@ -57,8 +57,10 @@ namespace SpeakUp
 						for (int j = 0; j < length2; j++)
 						{
 							var entry = rules[j];
-							if (entry.Key != constraint.key) continue;
-
+							// Checks if the current constraint is the current key. Custom check for the deserters mod. Not elegant, but until there are more mods that have this issue this soluton will work
+							if (entry.Key != constraint.key)
+								if(constraint.key != "deserters") continue;
+							
 							string text = entry.Value ?? "";
 							float value = 0f;
 							float expected = 0f;
