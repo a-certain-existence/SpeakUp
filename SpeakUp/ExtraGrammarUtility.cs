@@ -171,7 +171,7 @@ namespace SpeakUp
             //OTHER PAWN SITUATIONS
 
             //moving?
-            MakeRule(symbol + "moving", pawn.pather.Moving.ToStringYesNo());
+            if (pawn?.pather != null) MakeRule(symbol + "moving", pawn.pather.Moving.ToStringYesNo());
 
             //current activity
             var curJob = pawn.CurJob;
