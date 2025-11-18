@@ -213,6 +213,10 @@ namespace SpeakUp
             //needs tending
             MakeRule(symbol + "needs_tending", pawn.health.HasHediffsNeedingTend().ToStringYesNo());
 
+            //lifestage
+            LifeStageDef lifeStage = pawn.ageTracker.CurLifeStage;
+            MakeRule(symbol + "lifestage", lifeStage.defName);
+
             //injuries
             /*var hediffs = pawn.health.hediffSet.hediffs;
             for (int i = hediffs.Count; i-- > 0;)
